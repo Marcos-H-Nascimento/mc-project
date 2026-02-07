@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-title);
+    }
+
+p{
+  color: var(--text-muted);
+}
+
+:root {
+  /* Fundos (preto com undertone roxo) */
+  --bg-main: #0b0a10;        /* fundo principal */
+  --bg-section: #12101a;     /* seções / navbar */
+  --bg-section-blur: rgb(18, 16, 26,0.35);
+  --bg-muted: #1a1625;       /* cards / blocos */
+
+  /* Roxos frios (accent) */
+  --primary: #7c5cff;        /* roxo azulado elegante */
+  --primary-soft: #9f8cff;   /* roxo claro */
+  --primary-dark: #4f3bc9;   /* roxo profundo */
+
+  /* Textos */
+  --text-title: #f5f3ff;     /* branco com toque lilás */
+  --text-body: #d6d3f0;      /* leitura confortável */
+  --text-muted: #9b96c9;     /* secundário */
+
+  /* Bordas / divisões */
+  --border: #241f35;
+
+  /* Estados */
+  --hover: #8b6cff;
+  --focus: #b3a6ff;
+
+  /* Feedback */
+  --success: #3ddc97;
+  --warning: #f4c430;
+  --error: #ff5c7a;
+}

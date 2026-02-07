@@ -1,0 +1,16 @@
+.primary-button{
+    padding: 10px 25px;
+    font-size: 12px;
+    background: linear-gradient(to top,  var(--primary-dark),  var(--primary));
+    color: var(--text-title);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.35s;
+
+    &:hover{
+        transform: scale(1.1);
+        border: 1px solid white;
+    }
+}
