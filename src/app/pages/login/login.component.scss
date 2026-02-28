@@ -1,0 +1,70 @@
+.main-banner{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    background-color: var(--primary-soft);
+    height: 50%;
+    background-position: center;
+    background-size: cover;
+    filter: hue-rotate(60deg) saturate(50%);
+    background-image: url(https://i.pinimg.com/1200x/e7/7b/7f/e77b7f1bcc80427bb173e8555bb1e424.jpg);
+}
+
+
+.central-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+}
+
+img{
+    top: 150px;
+    width: 150px;
+    position: absolute;
+    z-index: 5;
+}
+
+.submit-user-container{
+    border-radius: 10px;
+    background-color: var(--bg-section-blur);
+    backdrop-filter: blur(20px);
+    height: 750px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        width: 250px;
+    }
+}
+
+.form-signup{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    input{
+        font-size: 20px;
+        padding: 10px;
+        width: 300px;
+        height: 25px;
+        margin: 10px;
+        border-radius: 5px;
+        border: 1px solid var(--border);
+        background-color: var(--text-body);
+    }
+
+    input::placeholder{
+        font-size: 12px;
+        text-align: center;
+    }
+}

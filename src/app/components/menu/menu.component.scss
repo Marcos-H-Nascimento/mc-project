@@ -14,7 +14,8 @@
     
     border: 1px solid var(--border);
     border-radius: 20px;
-    }
+    z-index: 10;    
+}
 
 .logo{
     cursor: pointer;
@@ -26,12 +27,15 @@
     &:hover{
         transform: scale(1.1);
     }
+
+    z-index: 10;
 }
 
 ul{
     display: flex;
     align-items: center;
     flex-direction: row;
+    z-index: 10;
 }
 
 li{
@@ -50,4 +54,74 @@ li{
         padding: 5px 12px;
         font-size: 15px;
     }
+    z-index: 10;
 }
+
+.user-init-interface{
+    text-align: center;
+
+    img{
+        width: 50px;
+        border-radius: 800px;
+    }
+    
+    h3{
+        margin: 0px;
+}
+
+    p{
+        margin: 0px;
+    }
+    z-index: 10;
+}
+
+.solutions-menu, .resources-menu{
+    position: fixed;
+    margin-top: 80px;
+    margin-left: 250px;
+    backdrop-filter: blur(2px);
+    width: 500px;
+    background: linear-gradient(to top, rgb(26, 22, 37, 0.5), rgb(18, 16, 26, 0.5));
+    padding: 10px 25px;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.solutions-menu,
+.resources-menu,
+.overlay{
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.35s ease;
+}
+
+.solutions-menu.active,
+.resources-menu.active,
+.overlay.active{
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+.overlay{
+
+    transition: .35s ease-in-out;
+    inset: 0;
+    opacity: 0;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, rgb(26, 22, 37, 0.5), rgb(18, 16, 26, 0.5));
+    backdrop-filter: blur(10px);
+}
+

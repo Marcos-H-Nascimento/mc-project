@@ -12,6 +12,12 @@ p{
   color: var(--text-muted);
 }
 
+a{
+  color: var(--text-body);
+  font-weight: 800;
+  text-decoration: none;
+}
+
 :root {
   /* Fundos (preto com undertone roxo) */
   --bg-main: #0b0a10;        /* fundo principal */

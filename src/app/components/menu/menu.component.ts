@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,21 +9,48 @@ import { Router } from '@angular/router';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  constructor( private router: Router) {}
+  constructor(private router: Router, public auth: AuthService) { }
 
-  goHome(){
-    this.router.navigate(['/home']);    
-  }  
+  goHome() {
+    this.router.navigate(['/home']);
+  }
 
-  goLogin(){
+  goLogin() {
     this.router.navigate(['/login'])
   }
 
-  // Settings
+  // Products
+  menuProductsOpen: boolean = false
+  // MenuSolutionsOpen
+  menuSolutionsOpen: boolean = false;
+  // MenuResourcesOpen
+  menuResourcesOpen: boolean = false;
 
-  settingsOpen = false;
+  toggleProducts(){
+    this.menuProductsOpen = !this.menuProductsOpen;
+    this.menuSolutionsOpen = false;
+    this.menuResourcesOpen = false;
+  }
 
-  toggleSetting(){
-    this.settingsOpen = !this.settingsOpen
+  toggleSolutions() {
+    this.menuSolutionsOpen = !this.menuSolutionsOpen;
+    this.menuResourcesOpen = false
+    this.menuProductsOpen = false
+  }
+
+  toggleResources() {
+    this.menuResourcesOpen = !this.menuResourcesOpen;
+    this.menuSolutionsOpen = false
+    this.menuProductsOpen = false
+  }
+
+  closeMenus(){
+    this.menuResourcesOpen = false;
+    this.menuSolutionsOpen = false;
+    this.menuProductsOpen = false;
+  }
+
+  get username(): string {
+    return this.username;
   }
 }

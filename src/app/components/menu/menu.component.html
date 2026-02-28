@@ -1,24 +1,48 @@
 <!-- @defer () { -->
 
-<!-- <div class="overlay"></div>
-
-<div class=""></div> -->
-
-    <div class="navegation-menu">
+<div class="navegation-menu">
     <ul>
         <img src="../../../assets/logo.png" class="logo" (click)="goHome()">
-        <li>Products <span><mat-icon>south</mat-icon></span></li>
-        <li>Resources <span><mat-icon>south</mat-icon></span></li>
-        <li>Solutions <span><mat-icon>south</mat-icon></span></li>
+        
+        <li (click)="toggleProducts()">Products <span><mat-icon>south</mat-icon></span></li>
+        
+        <li (click)="toggleResources()">
+            Resources <span><mat-icon>south</mat-icon></span>
+        </li>
+        
         <li>Enterprise</li>
+        
         <li>Pricing</li>
     </ul>
     <ul>
         <li>Contact</li>
         <li class="settings">Settings ⚙️</li>
         <app-button textButton="Login" (click)="goLogin()"></app-button>
+        <!-- <div class="user-init-interface" *ngIf="username"> 
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
+            <h3>{{username}}</h3>
+            <p>user Lv 1</p>
+        </div> -->
+
     </ul>
 </div>
+<div class="resources-menu" [class.active]="menuResourcesOpen">
+    <ul>
+        <section>
+            <p>hey, i finally work !</p>
+        </section>
+    </ul>
+</div>
+<div class="resources-menu" [class.active]="menuProductsOpen">
+    <ul>
+        <section>
+            <p>hey, i finally work !</p>
+        </section>
+    </ul>
+</div>
+
+
+<div class="overlay" [class.active]="menuSolutionsOpen || menuResourcesOpen || menuProductsOpen" (click)="closeMenus()"></div>
 
 
 <!-- } @placeholder (minimum 2000ms) {
